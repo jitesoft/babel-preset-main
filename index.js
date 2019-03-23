@@ -1,4 +1,4 @@
-module.exports = (options) => {
+module.exports = (api, options) => {
 
     const opts = require('./defaults')(options);
     return {
