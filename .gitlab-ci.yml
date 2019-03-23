@@ -13,7 +13,7 @@ deploy:
   stage: deploy
   image: jitesoft/node-base:latest
   before_script:
-    - cat package.json | sed -e "s/\${version}/${CI_COMMIT_TAG}/" > package.json
+    - npm version ${CI_COMMIT_TAG}
     - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
     - npm whoami
   script:
