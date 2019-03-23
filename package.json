@@ -1,6 +1,6 @@
 {
   "name": "@jitesoft/babel-preset-main",
-  "version": "{version}",
+  "version": "${version}",
   "description": "Babel preset with configurations for jitesoft projects.",
   "main": "index.js",
   "keywords": [
