@@ -1,7 +1,7 @@
 const helperUtils = require('@babel/helper-plugin-utils');
 const declare     = helperUtils['declare'];
 
-module.exports = declare((api, options) => {
+module.exports = declare((api, options = {}) => {
     api.assertVersion(7);
 
     const opts = require('./defaults')(options);

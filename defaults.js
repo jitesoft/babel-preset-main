@@ -21,9 +21,7 @@ const defaults = {
     'classProperties': {
         loose: true
     },
-    'throwExpressions': {
-
-    },
+    'throwExpressions': {},
     'privateMethods': {
         loose: true
     },
@@ -33,9 +31,7 @@ const defaults = {
     'nullishCoalescingOperator': {
         loose: false
     },
-    'exportDefaultFrom': {
-
-    },
+    'exportDefaultFrom': {},
     'decorators': {
         decoratorsBeforeExport: true,
         legacy: false
@@ -52,9 +48,7 @@ const defaults = {
         generators: false,
         async: false
     },
-    'partialApplication': {
-
-    }
+    'partialApplication': {}
 };
 
 module.exports = (options) => {

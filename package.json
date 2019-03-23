@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Babel preset with configurations for jitesoft projects.",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "babel",
     "preset"
