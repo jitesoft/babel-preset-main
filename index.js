@@ -1,4 +1,5 @@
-import { declare } from '@babel/helper-plugin-utils';
+const helperUtils = require('@babel/helper-plugin-utils');
+const declare     = helperUtils['declare'];
 
 module.exports = declare((api, options) => {
     api.assertVersion(7);
@@ -6,18 +7,18 @@ module.exports = declare((api, options) => {
     const opts = require('./defaults')(options);
     return {
         'presets': [
-            [ require('@babel/preset-env'), opts['preset-env'] ]
+            [ require('@babel/preset-env'), opts['presetEnv'] ]
         ],
         'plugins': [
-            [ require('@babel/plugin-proposal-object-rest-spread'), opts['object-rest-spread'] ],
+            [ require('@babel/plugin-proposal-object-rest-spread'), opts['objectRestSpread'] ],
             [ require('@babel/plugin-proposal-decorators'), opts['decorators'] ],
-            [ require('@babel/plugin-transform-runtime'),  opts['transform-runtime'] ],
-            [ require('@babel/plugin-proposal-partial-application'), opts['partial-application'] ],
-            [ require('@babel/plugin-proposal-class-properties'), opts['class-properties'] ],
-            [ require('@babel/plugin-proposal-optional-chaining'), opts['optional-chaining'] ],
-            [ require('@babel/plugin-proposal-throw-expressions'), opts['throw-expressions'] ],
-            [ require('@babel/plugin-proposal-nullish-coalescing-operator'),  opts['nullish-coalescing-operator']],
-            [ require('@babel/plugin-proposal-private-methods'),  opts['private-methods']]
+            [ require('@babel/plugin-transform-runtime'),  opts['transformRuntime'] ],
+            [ require('@babel/plugin-proposal-partial-application'), opts['partialApplication'] ],
+            [ require('@babel/plugin-proposal-class-properties'), opts['classProperties'] ],
+            [ require('@babel/plugin-proposal-optional-chaining'), opts['optionalChaining'] ],
+            [ require('@babel/plugin-proposal-throw-expressions'), opts['throwExpressions'] ],
+            [ require('@babel/plugin-proposal-nullish-coalescing-operator'),  opts['nullishCoalescingOperator']],
+            [ require('@babel/plugin-proposal-private-methods'),  opts['privateMethods']]
         ]
     }
 });

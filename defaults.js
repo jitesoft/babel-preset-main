@@ -1,5 +1,5 @@
 const defaults = {
-    'preset-env': {
+    'presetEnv': {
         useBuiltIns: 'usage',
         corejs: 3,
         targets: '> 0.25%, not dead, node > 8',
@@ -14,48 +14,49 @@ const defaults = {
         ignoreBrowserslistConfig: false,
         shippedProposals: false
     },
-    'object-rest-spread': {
+    'objectRestSpread': {
         loose: false,
         useBuiltIns: true
     },
-    'class-properties': {
+    'classProperties': {
         loose: true
     },
-    'throw-expressions': {
+    'throwExpressions': {
 
     },
-    'private-methods': {
+    'privateMethods': {
         loose: true
     },
-    'optional-chaining': {
+    'optionalChaining': {
         loose: false
     },
-    'nullish-coalescing-operator': {
+    'nullishCoalescingOperator': {
         loose: false
     },
-    'export-default-from': {
+    'exportDefaultFrom': {
 
     },
     'decorators': {
         decoratorsBeforeExport: true,
         legacy: false
     },
-    'transform-runtime': {
+    'transformRuntime': {
         absoluteRuntime: false,
         corejs: 3,
         helpers: true,
         regenerator: true,
         useESModules: true
     },
-    'transform-regenerator': {
+    'transformRegenerator': {
         asyncGenerators: false,
         generators: false,
         async: false
     },
-    'partial-application': {
+    'partialApplication': {
 
     }
 };
+
 module.exports = (options) => {
     return Object.assign(defaults, options);
 };
