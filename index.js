@@ -1,4 +1,7 @@
-module.exports = (api, options) => {
+import { declare } from '@babel/helper-plugin-utils';
+
+module.exports = declare((api, options) => {
+    api.assertVersion(7);
 
     const opts = require('./defaults')(options);
     return {
@@ -17,4 +20,4 @@ module.exports = (api, options) => {
             [ require('@babel/plugin-proposal-private-methods'),  opts['private-methods']]
         ]
     }
-};
+});
