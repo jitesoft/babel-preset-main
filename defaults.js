@@ -56,3 +56,6 @@ const defaults = {
 
     }
 };
+module.exports = (options) => {
+    return Object.assign(defaults, options);
+};

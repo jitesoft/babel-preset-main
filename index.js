@@ -1,9 +1,6 @@
-const defaults = require('./defaults');
-
 module.exports = (options) => {
 
-    const opts = Object.assign(defaults, options);
-
+    const opts = require('./defaults')(options);
     return {
         'presets': [
             [ require('@babel/preset-env'), opts['preset-env'] ]
