@@ -15,7 +15,7 @@ deploy:
   before_script:
     - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
     - npm whoami
-    - npm version from-git
+    - npm --no-git-tag-version version from-git
   script:
     - npm publish --access public
   after_script:
