@@ -1,0 +1,31 @@
+{
+  "name": "@jitesoft/babel-preset-main",
+  "version": "{version}",
+  "description": "Babel preset with configurations for jitesoft projects.",
+  "main": "index.js",
+  "keywords": [
+    "babel",
+    "preset"
+  ],
+  "author": "Johannes Tegnér <johannes@jitesoft.com>",
+  "license": "MIT",
+  "dependencies":  {
+    "@babel/runtime-corejs3": "^7.4.2",
+    "@babel/plugin-proposal-decorators": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-proposal-private-methods": "^7.4.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.2.0",
+    "@babel/preset-env": "^7.4.1",
+    "@babel/plugin-proposal-partial-application": "^7.4.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.4.0"
+  },
+  "peerDependencies": {
+    "core-js": "^3.0.0",
+    "@babel/core": "^7.4.0"
+  }
+}

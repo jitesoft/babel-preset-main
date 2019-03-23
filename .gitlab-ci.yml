@@ -1,0 +1,28 @@
+include:
+  - https://gitlab.com/jitesoft/gitlab-ci-lib/raw/master/dependency_scanning.yml
+
+stages:
+  - deploy
+  - analyse
+
+dependencies:
+  extends: .dependency_scanning
+  stage: analyse
+
+deploy:
+  stage: deploy
+  image: jitesoft/node-base:latest
+  variables:
+    GIT_STRATEGY: none
+  dependencies:
+    - build
+  before_script:
+    - cat package.json | sed -e "s/\${version}/${CI_COMMIT_TAG}/" > package.json
+    - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+    - npm whoami
+  script:
+    - npm publish --access public
+  after_script:
+    - rm -f ~/.npmrc
+  only:
+    - tags
