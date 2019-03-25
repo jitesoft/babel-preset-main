@@ -52,5 +52,12 @@ const defaults = {
 };
 
 module.exports = (options) => {
-    return Object.assign(defaults, options);
+    return merge(defaults, options);
+};
+
+const merge = (o1, o2) => {
+    for (let key in Object.keys(o2)) {
+        o1[key] = typeof o2[key] === "object" ? merge(o1[key], o2[key]) : o2[key];
+    }
+    return o1;
 };
