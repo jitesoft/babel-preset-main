@@ -8,11 +8,13 @@
   },
   "keywords": [
     "babel",
-    "preset"
+    "preset",
+    "jitesoft"
   ],
   "author": "Johannes Tegnér <johannes@jitesoft.com>",
   "license": "MIT",
   "dependencies": {
+    "core-js": "^3.0.0",
     "@babel/helper-plugin-utils": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-decorators": "^7.4.0",
@@ -27,7 +29,6 @@
     "@babel/runtime-corejs3": "^7.4.2"
   },
   "peerDependencies": {
-    "core-js": "^3.0.0",
     "@babel/core": "^7.4.0"
   }
 }

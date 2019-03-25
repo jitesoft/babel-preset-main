@@ -1,7 +1,7 @@
 const defaults = {
     'presetEnv': {
         useBuiltIns: 'usage',
-        corejs: 3,
+        corejs: { version: 3, proposals: true },
         targets: '> 0.25%, not dead, node > 8',
         spec: false,
         loose: false,
@@ -38,7 +38,7 @@ const defaults = {
     },
     'transformRuntime': {
         absoluteRuntime: false,
-        corejs: 3,
+        corejs: { version: 3, proposals: true },
         helpers: true,
         regenerator: true,
         useESModules: true
