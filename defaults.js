@@ -44,20 +44,20 @@ const defaults = {
         useESModules: true
     },
     'transformRegenerator': {
-        asyncGenerators: false,
-        generators: false,
-        async: false
+        asyncGenerators: true,
+        generators: true,
+        async: true
     },
     'partialApplication': {}
 };
 
-module.exports = (options) => {
+module.exports = (api, options) => {
     return merge(defaults, options);
 };
 
 const merge = (o1, o2) => {
     for (let key in Object.keys(o2)) {
-        o1[key] = typeof o2[key] === "object" ? merge(o1[key], o2[key]) : o2[key];
+        o1[key] = (o2[key] instanceof Object) ? merge(o1[key], o2[key]) : o2[key];
     }
     return o1;
 };
