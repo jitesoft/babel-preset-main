@@ -52,7 +52,7 @@ const defaults = {
 };
 
 module.exports = (api, options) => {
-    return merge(defaults, options);
+    return merge(defaults, options || {});
 };
 
 const merge = (o1, o2) => {
