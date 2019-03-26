@@ -54,7 +54,7 @@ module.exports = declare((api) => {
             ],
             [
                 require('@babel/plugin-proposal-class-properties'), {
-                    loose: true
+                    loose: false
                 }
             ],
             [
@@ -76,7 +76,7 @@ module.exports = declare((api) => {
             ],
             [
                 require('@babel/plugin-proposal-private-methods'), {
-                    loose: true
+                    loose: false
                 }
             ]
         ]
