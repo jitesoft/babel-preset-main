@@ -56,7 +56,8 @@ module.exports = declare((api, options) => {
             require('@babel/plugin-proposal-optional-chaining'),
             require('@babel/plugin-proposal-throw-expressions'),
             require('@babel/plugin-proposal-nullish-coalescing-operator'),
-            require('@babel/plugin-proposal-private-methods')
+            require('@babel/plugin-proposal-private-methods'),
+            require('@babel/plugin-syntax-dynamic-import')
         ]
     }
 });
