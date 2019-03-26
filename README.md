@@ -18,27 +18,3 @@ Includes the following presets and plugins:
 ```
 
 Requires `corejs3` and `@babel/core`.
-
-## Options
-
-Passing options to either preset or plugin is easily done through the presets options object.  
-Observe that the names of the presets and plugins have camelCase names in the options.
-
-```json
-{
-  "presets": [
-    ["@jitesoft/main",
-    {
-      "presetEnv": {
-        "targets": "> 0.2%, not dead"
-      },
-      "classProperties": {
-        "loose": false
-      }
-    }
-   ]
-  ]
-}
-```
-
-Default values can be found in the `defaults.js` file.
