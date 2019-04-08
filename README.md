@@ -17,4 +17,4 @@ Includes the following presets and plugins:
 @babel/plugin-transform-runtime
 ```
 
-Requires `corejs3` and `@babel/core`.
+Requires `corejs (2 or 3)` and `@babel/core`.
