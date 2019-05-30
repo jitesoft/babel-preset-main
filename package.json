@@ -26,9 +26,9 @@
     "@babel/plugin-proposal-private-methods": "^7.4.4",
     "@babel/plugin-proposal-throw-expressions": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/runtime-corejs3": "^7.4.4",
-    "@babel/runtime-corejs2": "^7.4.4"
+    "@babel/preset-env": "^7.4.5",
+    "@babel/runtime-corejs3": "^7.4.5",
+    "@babel/runtime-corejs2": "^7.4.5"
   },
   "peerDependencies": {
     "core-js": "*",
