@@ -28,10 +28,16 @@
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/runtime-corejs3": "^7.4.5",
-    "@babel/runtime-corejs2": "^7.4.5"
+    "@babel/runtime-corejs2": "^7.4.5",
+    "snyk": "^1.189.0"
   },
   "peerDependencies": {
     "core-js": "*",
     "@babel/core": "^7.4.4"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
