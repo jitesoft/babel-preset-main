@@ -1,6 +1,7 @@
 {
   "name": "@jitesoft/babel-preset-main",
   "version": "0.0.1",
+  "private": false,
   "description": "Babel preset with configurations for jitesoft projects.",
   "main": "index.js",
   "publishConfig": {
@@ -19,25 +20,22 @@
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/plugin-proposal-export-default-from": "^7.5.2",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.4",
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
     "@babel/plugin-proposal-partial-application": "^7.4.4",
     "@babel/plugin-proposal-private-methods": "^7.4.4",
     "@babel/plugin-proposal-throw-expressions": "^7.2.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.5.0",
-    "@babel/preset-env": "^7.5.2",
-    "@babel/runtime-corejs2": "^7.5.2",
-    "@babel/runtime-corejs3": "^7.5.2",
-    "snyk": "^1.192.4"
+    "@babel/preset-env": "^7.5.4",
+    "@babel/runtime-corejs2": "^7.5.4",
+    "@babel/runtime-corejs3": "^7.5.4"
   },
   "peerDependencies": {
     "core-js": "*",
-    "@babel/core": "^7.4.4"
+    "@babel/core": "^7.5"
   },
   "scripts": {
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
-  },
-  "snyk": true
+    "test": "npm audit"
+  }
 }
