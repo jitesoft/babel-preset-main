@@ -17,6 +17,9 @@ Includes the following presets and plugins:
 @babel/plugin-proposal-private-methods
 @babel/plugin-proposal-throw-expressions
 @babel/plugin-transform-runtime
+@babel/plugin-syntax-dynamic-import
+@babel/plugin-proposal-async-generator-functions
+@babel/plugin-proposal-export-namespace-from
 ```
 
 Requires `corejs (2 or 3)` and `@babel/core`.

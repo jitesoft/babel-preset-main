@@ -76,7 +76,11 @@ module.exports = declare((api, options) => {
             isExcluded('@babel/plugin-syntax-dynamic-import', () =>
                 require('@babel/plugin-syntax-dynamic-import')),
             isExcluded('@babel/plugin-proposal-export-default-from', () =>
-                require('@babel/plugin-proposal-export-default-from'))
+                require('@babel/plugin-proposal-export-default-from')),
+            isExcluded('@babel/plugin-proposal-export-namespace-from', () =>
+                require('@babel/plugin-proposal-export-namespace-from')),
+            isExcluded('@babel/plugin-proposal-async-generator-functions', () =>
+                require('@babel/plugin-proposal-async-generator-functions'))
         ].filter(p => p !== null)
     }
 });
