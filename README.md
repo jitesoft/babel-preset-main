@@ -1,5 +1,8 @@
 # @jitesoft/babel-preset-main
 
+[![Known Vulnerabilities](https://dev.snyk.io/test/npm/@jitesoft/babel-preset-main/badge.svg)](https://dev.snyk.io/test/npm/@jitesoft/babel-preset-main)
+[![pipeline status](https://gitlab.com/jitesoft/open-source/javascript/babel-preset-main/badges/master/pipeline.svg)](https://gitlab.com/jitesoft/open-source/javascript/babel-preset-main/commits/master)
+
 Main preset for Jitesoft javascript projects which uses babel.
 
 Includes the following presets and plugins:
