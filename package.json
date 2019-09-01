@@ -7,6 +7,13 @@
   "publishConfig": {
     "access": "public"
   },
+  "bugs": {
+    "url": "https://github.com/jitesoft/babel-preset-main/issues"
+  },
+  "repository": {
+    "url": "https://github.com/jitesoft/babel-preset-main",
+    "type": "git"
+  },
   "keywords": [
     "babel",
     "preset",
@@ -35,7 +42,7 @@
   },
   "peerDependencies": {
     "core-js": "*",
-    "@babel/core": "^7.5"
+    "@babel/core": "^7.5.5"
   },
   "scripts": {
     "test": "npm audit"

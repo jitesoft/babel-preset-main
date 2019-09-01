@@ -15,6 +15,13 @@ module.exports = declare((api, options) => {
         targets
     } = options;
 
+    if (corejs && corejs === 2) {
+        console.warn(
+          '[@jitesoft/babel-preset-main]: **Deprecation warning** ' +
+          'CoreJS 2 will in next major release not be supported.'
+        );
+    }
+
     if (targets === undefined) {
         targets = '> 0.25%, not dead, node >= 8';
         if (mode === 'web') {
@@ -38,7 +45,7 @@ module.exports = declare((api, options) => {
                 require('@babel/preset-env'),
                 {
                     useBuiltIns: 'usage',
-                    corejs: {version: corejs || 3, proposals: false},
+                    corejs: {version: corejs || 3, proposals: true},
                     targets: targets,
                     modules: modules === undefined ? 'auto' : modules
                 }
