@@ -7,20 +7,12 @@ module.exports = declare((api, options) => {
     const {
         exclude,
         modules,
-        mode,
-        corejs,
+        mode
     } = options;
 
     let {
         targets
     } = options;
-
-    if (corejs && corejs === 2) {
-        console.warn(
-          '[@jitesoft/babel-preset-main]: **Deprecation warning** ' +
-          'CoreJS 2 will in next major release not be supported.'
-        );
-    }
 
     if (targets === undefined) {
         targets = '> 0.25%, not dead, node >= 8';
@@ -45,7 +37,7 @@ module.exports = declare((api, options) => {
                 require('@babel/preset-env'),
                 {
                     useBuiltIns: 'usage',
-                    corejs: {version: corejs || 3, proposals: true},
+                    corejs: {version: 3, proposals: true},
                     targets: targets,
                     modules: modules === undefined ? 'auto' : modules
                 }
@@ -65,7 +57,7 @@ module.exports = declare((api, options) => {
             ]),
             isExcluded('@babel/plugin-transform-runtime', () => [
                 require('@babel/plugin-transform-runtime'), {
-                    corejs: {version: corejs || 3, proposals: true}
+                    corejs: {version: 3, proposals: true}
                 }
             ]),
             isExcluded('@babel/plugin-proposal-partial-application', () =>
@@ -87,7 +79,11 @@ module.exports = declare((api, options) => {
             isExcluded('@babel/plugin-proposal-export-namespace-from', () =>
                 require('@babel/plugin-proposal-export-namespace-from')),
             isExcluded('@babel/plugin-proposal-async-generator-functions', () =>
-                require('@babel/plugin-proposal-async-generator-functions'))
+                require('@babel/plugin-proposal-async-generator-functions')),
+            isExcluded('@babel/plugin-transform-named-capturing-groups-regex', () =>
+                require('@babel/plugin-transform-named-capturing-groups-regex')),
+            isExcluded('@babel/plugin-transform-dotall-regex', () =>
+                require('@babel/plugin-transform-dotall-regex'))
         ].filter(p => p !== null)
     }
 });

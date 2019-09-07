@@ -25,16 +25,16 @@ Includes the following presets and plugins:
 @babel/plugin-syntax-dynamic-import
 @babel/plugin-proposal-async-generator-functions
 @babel/plugin-proposal-export-namespace-from
+@babel/plugin-transform-named-capturing-groups-regex
 ```
 
-Requires `corejs (2 or 3)` and `@babel/core`.
+Requires `corejs (v 3+)` and `@babel/core`.
 
 
 ## Options
 
 There are a few options to make it easier to work with the preset:
 
-* `corejs` - Sets the core-js version (or false if wanted) to use (defaults to `3`). Note, CoreJS 2 support is deprecated as of 1.5.0 and will be removed in 2.0.0.
 * `modules` - Enables or sets modules for preseet-env (defaults to `auto`).
 * `exclude` - Takes an array of plugins that should NOT be used (full plugin name including `@babel`) (defaults to `[]`).
 * `targets` - Targets value for preset-env, if used `mode` will be ignored (defaults to undefined to enable mode). 

@@ -1,6 +1,9 @@
+include:
+  - https://gitlab.com/jitesoft/gitlab-ci-lib/raw/master/dependency_scanning.yml
+
 deploy:
   stage: deploy
-  image: jitesoft/node-base:latest
+  image: jitesoft/node:latest
   before_script:
     - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
     - npm whoami
@@ -16,3 +19,5 @@ deploy:
   tags:
     - jitesoft
 
+scan:
+  extends: .dependency_scan:npm
