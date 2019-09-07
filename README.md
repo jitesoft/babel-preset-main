@@ -1,5 +1,6 @@
 # @jitesoft/babel-preset-main
 
+[![npm (scoped)](https://img.shields.io/npm/v/@jitesoft/babel-preset-main)](https://www.npmjs.com/package/@jitesoft/babel-preset-main)
 [![Known Vulnerabilities](https://dev.snyk.io/test/npm/@jitesoft/babel-preset-main/badge.svg)](https://dev.snyk.io/test/npm/@jitesoft/babel-preset-main)
 [![pipeline status](https://gitlab.com/jitesoft/open-source/javascript/babel-preset-main/badges/master/pipeline.svg)](https://gitlab.com/jitesoft/open-source/javascript/babel-preset-main/commits/master)
 [![npm](https://img.shields.io/npm/dt/@jitesoft/babel-preset-main)](https://www.npmjs.com/package/@jitesoft/babel-preset-main)
