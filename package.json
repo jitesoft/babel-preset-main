@@ -43,7 +43,7 @@
   },
   "peerDependencies": {
     "core-js": "^3",
-    "@babel/core": "^7.6.3"
+    "@babel/core": "^7.6.4"
   },
   "scripts": {
     "test": "npm audit"
