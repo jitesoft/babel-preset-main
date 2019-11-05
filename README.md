@@ -27,6 +27,7 @@ Includes the following presets and plugins:
 @babel/plugin-proposal-async-generator-functions
 @babel/plugin-proposal-export-namespace-from
 @babel/plugin-transform-named-capturing-groups-regex
+@@babel/runtime-corejs3
 ```
 
 Requires `corejs (v 3+)` and `@babel/core`.
@@ -40,6 +41,6 @@ There are a few options to make it easier to work with the preset:
 * `exclude` - Takes an array of plugins that should NOT be used (full plugin name including `@babel`) (defaults to `[]`).
 * `targets` - Targets value for preset-env, if used `mode` will be ignored (defaults to undefined to enable mode). 
 * `mode` - Flags build mode (`web`, `node` or undefined for default).
-    * `node` will set the targets value to `node >= 8`.
-    * `web` will set the targets value to `> 0.25%, not dead`.
-    * `undefined/default` will set the targets value to `> 0.25%, not dead, node >= 8`.
+    * `node` will set the targets value to `node >= 10`.
+    * `web` will set the targets value to `defaults`.
+    * `undefined/default` will set the targets value to `defaults, node >= 10`.

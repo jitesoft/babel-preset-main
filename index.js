@@ -14,12 +14,17 @@ module.exports = declare((api, options) => {
         targets
     } = options;
 
+    const defaults = {
+        web: 'defaults',
+        node: 'node >= 10'
+    };
+
     if (targets === undefined) {
-        targets = '> 0.25%, not dead, node >= 8';
+        targets = `${defaults.web}, ${defaults.node}`;
         if (mode === 'web') {
-            targets = '> 0.25%, not dead'
+            targets = defaults.web;
         } else if (mode === 'node') {
-            targets = 'node >= 8'
+            targets = defaults.node;
         }
     }
 
@@ -29,7 +34,6 @@ module.exports = declare((api, options) => {
         }
         return null;
     };
-
 
     return {
         'presets': [
