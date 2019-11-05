@@ -11,6 +11,7 @@ module.exports = declare((api, options) => {
     } = options;
 
     let {
+        useBuiltIns,
         targets
     } = options;
 
@@ -40,10 +41,10 @@ module.exports = declare((api, options) => {
             (isExcluded('@babel/preset-env', () => [
                 require('@babel/preset-env'),
                 {
-                    useBuiltIns: 'usage',
+                    useBuiltIns: (useBuiltIns === undefined) ? 'usage' : useBuiltIns,
                     corejs: {version: 3, proposals: true},
                     targets: targets,
-                    modules: modules === undefined ? 'auto' : modules
+                    modules: (modules === undefined) ? 'auto' : modules
                 }
             ]))
         ].filter(p => p !== null),
