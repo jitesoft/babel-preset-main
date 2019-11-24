@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.8.0
+
+* Bumped all packages to 7.7.4
+* Updated requirement of babel to 7.7.4.
+* 
+
 ## 1.6.0
 
 * Added `@babel/plugin-transform-named-capturing-groups-regex`.

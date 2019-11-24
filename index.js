@@ -44,7 +44,7 @@ module.exports = declare((api, options) => {
                     useBuiltIns: (useBuiltIns === undefined) ? 'usage' : useBuiltIns,
                     corejs: {version: 3, proposals: true},
                     targets: targets,
-                    modules: (modules === undefined) ? 'auto' : modules
+                    modules: (modules === undefined) ? 'auto' : modules,
                 }
             ]))
         ].filter(p => p !== null),
