@@ -4,7 +4,6 @@
 
 * Bumped all packages to 7.7.4
 * Updated requirement of babel to 7.7.4.
-* 
 
 ## 1.6.0
 
