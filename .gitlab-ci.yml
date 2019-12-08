@@ -13,5 +13,5 @@ scan:
   extends: .scan:npm
 
 deploy:
-  tags: [ jitesoft, protected ]
+  tags: [ jitesoft, protected, npm ]
   extends: .npm:deploy
