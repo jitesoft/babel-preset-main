@@ -39,7 +39,7 @@
     "@babel/plugin-transform-dotall-regex": "7.7.4",
     "@babel/plugin-proposal-throw-expressions": "7.7.4",
     "@babel/plugin-syntax-dynamic-import": "7.7.4",
-    "@babel/plugin-transform-runtime": "7.7.4",
+    "@babel/plugin-transform-runtime": "7.7.6",
     "@babel/plugin-proposal-async-generator-functions": "7.7.4",
     "@babel/plugin-proposal-export-namespace-from": "7.7.4",
     "@babel/preset-env": "7.7.4",
