@@ -22,6 +22,7 @@ Includes the following presets and plugins:
 @babel/plugin-proposal-partial-application
 @babel/plugin-proposal-private-methods
 @babel/plugin-proposal-throw-expressions
+@babel/plugin-transform-object-assign
 @babel/plugin-transform-runtime
 @babel/plugin-syntax-dynamic-import
 @babel/plugin-proposal-async-generator-functions
@@ -39,7 +40,7 @@ There are a few options to make it easier to work with the preset:
 
 * `modules` - Enables or sets modules for preseet-env (defaults to `auto`).
 * `exclude` - Takes an array of plugins that should NOT be used (full plugin name including `@babel`) (defaults to `[]`).
-* `targets` - Targets value for preset-env, if used `mode` will be ignored (defaults to undefined to enable mode). 
+* `targets` - Targets value for preset-env, if used `mode` will be ignored (defaults to undefined to enable mode).
 * `mode` - Flags build mode (`web`, `node` or undefined for default).
     * `node` will set the targets value to `node >= 10`.
     * `web` will set the targets value to `defaults`.
