@@ -88,7 +88,9 @@ module.exports = declare((api, options) => {
             isExcluded('@babel/plugin-transform-named-capturing-groups-regex', () =>
                 require('@babel/plugin-transform-named-capturing-groups-regex')),
             isExcluded('@babel/plugin-transform-dotall-regex', () =>
-                require('@babel/plugin-transform-dotall-regex'))
+                require('@babel/plugin-transform-dotall-regex')),
+            isExcluded('@babel/plugin-transform-object-assign', () =>
+                require('@babel/plugin-transform-object-assign'))
         ].filter(p => p !== null)
     }
 });
