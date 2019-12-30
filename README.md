@@ -38,12 +38,40 @@ Requires `corejs (v 3+)` and `@babel/core`.
 
 ## Options
 
-There are a few options to make it easier to work with the preset:
+This preset uses the same options as preset-env including the options that the different
+plugins have.  
+Other than those, the following options are possible to use:
 
-* `modules` - Enables or sets modules for preseet-env (defaults to `auto`).
 * `exclude` - Takes an array of plugins that should NOT be used (full plugin name including `@babel`) (defaults to `[]`).
-* `targets` - Targets value for preset-env, if used `mode` will be ignored (defaults to undefined to enable mode).
 * `mode` - Flags build mode (`web`, `node` or undefined for default).
-    * `node` will set the targets value to `node >= 10`.
+    * `node` will set the targets value to `node >= 12`.
     * `web` will set the targets value to `defaults`.
-    * `undefined/default` will set the targets value to `defaults, node >= 10`.
+    * `undefined/default` will set the targets value to `defaults, node >= 12`.
+
+### Excluding
+
+When excluding plugins and presets, the values checked are not the whole name with scope and all. So you
+can use shorter forms in your exclude array.  
+The following values are checked with a `indexOf` check:
+
+```
+preset-env                   => @babel/preset-env
+object-rest-spread           => @babel/plugin-proposal-object-rest-spread
+decorators                   => @babel/plugin-proposal-decorators
+transform-runtime            => @babel/plugin-transform-runtime
+partial-application          => @babel/plugin-proposal-partial-application
+class-properties             => @babel/plugin-proposal-class-properties
+optional-chaining            => @babel/plugin-proposal-optional-chaining
+throw-expressions            => @babel/plugin-proposal-throw-expressions
+nullish-coalescing-operator  => @babel/plugin-proposal-nullish-coalescing-operator
+private-methods              => @babel/plugin-proposal-private-methods
+dynamic-import               => @babel/plugin-syntax-dynamic-import
+export-default-from          => @babel/plugin-proposal-export-default-from
+export-namespace-from        => @babel/plugin-proposal-export-namespace-from
+async-generator-functions    => @babel/plugin-proposal-async-generator-functions
+named-capturing-groups-regex => @babel/plugin-transform-named-capturing-groups-regex
+dotall-regex                 => @babel/plugin-transform-dotall-regex
+object-assign                => @babel/plugin-transform-object-assign
+optional-catch-binding       => @babel/plugin-proposal-optional-catch-binding
+for-of                       => @babel/plugin-transform-for-of
+```
