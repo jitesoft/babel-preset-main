@@ -28,6 +28,8 @@ Includes the following presets and plugins:
 @babel/plugin-proposal-async-generator-functions
 @babel/plugin-proposal-export-namespace-from
 @babel/plugin-transform-named-capturing-groups-regex
+@babel/plugin-proposal-optional-catch-binding
+@babel/plugin-transform-for-of
 @@babel/runtime-corejs3
 ```
 
