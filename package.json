@@ -44,7 +44,7 @@
     "@babel/plugin-transform-runtime": "7.7.6",
     "@babel/plugin-proposal-optional-catch-binding": "^7.7.4",
     "@babel/plugin-transform-for-of": "^7.7.4",
-    "@babel/preset-env": "7.7.7",
+    "@babel/preset-env": "7.8.2",
     "@babel/runtime-corejs3": "7.7.7"
   },
   "peerDependencies": {
