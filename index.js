@@ -11,7 +11,7 @@ module.exports = declare((api, options) => {
   let targets = options.targets;
 
   //region Helpers.
-  const isNotExcluded = (str, then) => ((options.exclude || []).indexOf(str) === -1) ? or() : null;
+  const isNotExcluded = (str, then) => ((options.exclude || []).indexOf(str) === -1) ? then() : null;
   const setOr = (value, or) => value === undefined ? or : value;
   //endregion
 
