@@ -24,7 +24,7 @@ Includes the following presets and plugins:
 @babel/plugin-transform-for-of
 @babel/plugin-transform-object-assign
 @babel/plugin-transform-runtime
-@@babel/runtime-corejs3
+@babel/runtime-corejs3
 ```
 
 Requires `corejs (v 3+)` and `@babel/core`.

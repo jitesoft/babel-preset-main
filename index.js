@@ -28,7 +28,7 @@ module.exports = declare((api, options) => {
     useBuiltIns: setOr(options.useBuiltIns, 'entry'),
     targets: targets,
     loose: setOr(options.loose, false),
-    modules: setOr(options.modules, false),
+    modules: setOr(options.modules, 'auto'),
     debug: setOr(options.debug, false),
     include: setOr(options.include, []),
     corejs: setOr(options.corejs, {
@@ -36,7 +36,7 @@ module.exports = declare((api, options) => {
       proposals: true
     }),
     forceAllTransforms: setOr(options.forceAllTransforms, false),
-    shippedProposals: setOr(options.shippedProposals, true)
+    shippedProposals: setOr(options.shippedProposals, false)
   };
 
   return {
