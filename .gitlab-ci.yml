@@ -15,7 +15,7 @@ test:
   extends: .npm:test
 
 scan:
-  extends: .scan:npm
+  extends: .dependency_scan
 
 deploy:
   tags: [ jitesoft, protected, npm ]
