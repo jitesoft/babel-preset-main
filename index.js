@@ -1,5 +1,5 @@
 const helperUtils = require('@babel/helper-plugin-utils');
-const declare = helperUtils['declare'];
+const declare = helperUtils.declare;
 
 const defaultTargets = {
   web: 'defaults',
@@ -10,10 +10,10 @@ module.exports = declare((api, options) => {
   api.assertVersion(7);
   let targets = options.targets;
 
-  //region Helpers.
+  // region Helpers.
   const isNotExcluded = (str, then) => ((options.exclude || []).indexOf(str) === -1) ? then() : null;
   const setOr = (value, or) => value === undefined ? or : value;
-  //endregion
+  // endregion
 
   if (!targets) {
     targets = `${defaultTargets.web}, ${defaultTargets.node}`;
@@ -40,13 +40,13 @@ module.exports = declare((api, options) => {
   };
 
   return {
-    'presets': [
+    presets: [
       (isNotExcluded('preset-env', () => [
         require('@babel/preset-env'),
         defaultPresetEnv
       ]))
     ].filter(p => p !== null),
-    'plugins': [
+    plugins: [
       isNotExcluded('decorators', () => [
         require('@babel/plugin-proposal-decorators'), {
           decoratorsBeforeExport: setOr(options.decoratorsBeforeExport, true),
@@ -74,7 +74,7 @@ module.exports = declare((api, options) => {
       isNotExcluded('export-namespace-from', () =>
         require('@babel/plugin-proposal-export-namespace-from')),
       isNotExcluded('object-assign', () =>
-        require('@babel/plugin-transform-object-assign')),
+        require('@babel/plugin-transform-object-assign'))
     ].filter(p => p !== null)
   };
 });

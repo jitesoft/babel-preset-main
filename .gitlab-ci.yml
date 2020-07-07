@@ -5,6 +5,8 @@ include:
     project: jitesoft/gitlab-ci-lib
   - file: /license_management.yml
     project: jitesoft/gitlab-ci-lib
+  - file: /scan.yml
+    project: jitesoft/open-source/javascript/audit-for-gitlab
 
 stages:
   - test

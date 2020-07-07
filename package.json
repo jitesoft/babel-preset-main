@@ -42,7 +42,16 @@
     "@babel/core": "^7.10.4",
     "core-js": "^3.6"
   },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "@jitesoft/eslint-config": "^2.2.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@jitesoft"
+    ]
+  },
   "scripts": {
-    "test": "npm audit"
+    "test": "eslint index.js"
   }
 }
