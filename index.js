@@ -71,8 +71,6 @@ module.exports = declare((api, options) => {
         require('@babel/plugin-proposal-private-methods')),
       isNotExcluded('export-default-from', () =>
         require('@babel/plugin-proposal-export-default-from')),
-      isNotExcluded('export-namespace-from', () =>
-        require('@babel/plugin-proposal-export-namespace-from')),
       isNotExcluded('object-assign', () =>
         require('@babel/plugin-transform-object-assign'))
     ].filter(p => p !== null)
