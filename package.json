@@ -42,7 +42,7 @@
     "core-js": "^3.6.5"
   },
   "devDependencies": {
-    "eslint": "^7.9.0",
+    "eslint": "^7.10.0",
     "@jitesoft/eslint-config": "^2.6.0"
   },
   "eslintConfig": {
