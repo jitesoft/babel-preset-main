@@ -1,13 +1,14 @@
 {
   "name": "@jitesoft/babel-preset-main",
   "private": false,
-  "description": "Babel preset with configurations for jitesoft projects.",
+  "description": "Babel preset with configurations for Jitesoft projects.",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/jitesoft/babel-preset-main/issues"
+    "url": "https://github.com/jitesoft/babel-preset-main/issues",
+    "email": "sec@jitesoft.com"
   },
   "repository": {
     "url": "https://github.com/jitesoft/babel-preset-main",
@@ -42,8 +43,8 @@
     "core-js": "^3.6.5"
   },
   "devDependencies": {
-    "eslint": "^7.9.0",
-    "@jitesoft/eslint-config": "^2.6.0"
+    "eslint": "^7.10.0",
+    "@jitesoft/eslint-config": "^2.7.0"
   },
   "eslintConfig": {
     "extends": [
