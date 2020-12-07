@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@jitesoft/eslint-config": "^2.10.0",
-    "eslint": "^7.14"
+    "eslint": "^7.15"
   },
   "eslintConfig": {
     "extends": [
