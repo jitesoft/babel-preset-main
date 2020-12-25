@@ -61,6 +61,8 @@ module.exports = declare((api, options) => {
           }
         }
       ]),
+      isNotExcluded('syntax-top-level-await', () =>
+        require('@babel/plugin-syntax-top-level-await')),
       isNotExcluded('partial-application', () =>
         require('@babel/plugin-proposal-partial-application')),
       isNotExcluded('class-properties', () =>
