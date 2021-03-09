@@ -36,7 +36,7 @@
     "@babel/plugin-syntax-top-level-await": "7.12.13",
     "@babel/plugin-transform-object-assign": "7.12.13",
     "@babel/plugin-transform-runtime": "7.13.9",
-    "@babel/preset-env": "7.13.9",
+    "@babel/preset-env": "7.13.10",
     "@babel/runtime-corejs3": "7.13.9"
   },
   "peerDependencies": {
