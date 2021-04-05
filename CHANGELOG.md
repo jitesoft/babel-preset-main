@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.9.0
+
+Removal of ESlint packages.
+
+Babel and plugins updated to latest versions.
+
 ## 2.1.0
 
 Constraint on @babel/core updated to ^7.8.0
