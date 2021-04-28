@@ -74,7 +74,9 @@ module.exports = declare((api, options) => {
       isNotExcluded('export-default-from', () =>
         require('@babel/plugin-proposal-export-default-from')),
       isNotExcluded('object-assign', () =>
-        require('@babel/plugin-transform-object-assign'))
+        require('@babel/plugin-transform-object-assign')),
+      isNotExcluded('pipeline-operator', () =>
+        require('@babel/plugin-proposal-pipeline-operator'))
     ].filter(p => p !== null)
   };
 });
