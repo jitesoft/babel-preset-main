@@ -1,0 +1,76 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  target-branch: dependency-updates
+  ignore:
+  - dependency-name: "@babel/runtime-corejs3"
+    versions:
+    - 7.12.13
+    - 7.12.18
+    - 7.13.10
+    - 7.13.17
+    - 7.13.3
+    - 7.13.6
+    - 7.13.7
+    - 7.13.9
+  - dependency-name: "@babel/plugin-transform-runtime"
+    versions:
+    - 7.12.13
+    - 7.12.15
+    - 7.12.17
+    - 7.13.10
+    - 7.13.15
+    - 7.13.2
+    - 7.13.6
+    - 7.13.7
+    - 7.13.9
+  - dependency-name: "@babel/plugin-proposal-decorators"
+    versions:
+    - 7.13.0
+    - 7.13.15
+    - 7.13.5
+  - dependency-name: eslint
+    versions:
+    - 7.18.0
+    - 7.19.0
+    - 7.20.0
+    - 7.22.0
+    - 7.23.0
+  - dependency-name: "@babel/preset-env"
+    versions:
+    - 7.12.16
+    - 7.12.17
+    - 7.13.0
+    - 7.13.10
+    - 7.13.12
+    - 7.13.5
+    - 7.13.9
+  - dependency-name: "@babel/plugin-proposal-private-methods"
+    versions:
+    - 7.12.13
+    - 7.13.0
+  - dependency-name: "@babel/plugin-proposal-class-properties"
+    versions:
+    - 7.12.13
+    - 7.13.0
+  - dependency-name: "@babel/helper-plugin-utils"
+    versions:
+    - 7.12.13
+    - 7.13.0
+  - dependency-name: "@babel/plugin-proposal-throw-expressions"
+    versions:
+    - 7.12.13
+  - dependency-name: "@babel/plugin-syntax-top-level-await"
+    versions:
+    - 7.12.13
+  - dependency-name: "@babel/plugin-proposal-export-default-from"
+    versions:
+    - 7.12.13
+  - dependency-name: "@babel/plugin-transform-object-assign"
+    versions:
+    - 7.12.13
