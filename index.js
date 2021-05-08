@@ -64,6 +64,12 @@ module.exports = declare((api, options) => {
           version: pkg.dependencies['@babel/plugin-transform-runtime']
         }
       ]),
+      isNotExcluded('pipeline-operator', () => [
+        require('@babel/plugin-proposal-pipeline-operator'),
+        {
+          proposal: options.pipeline || 'minimal'
+        }
+      ]),
       isNotExcluded('async-do-expressions', () =>
         require('@babel/plugin-proposal-async-do-expressions')),
       isNotExcluded('export-default-from', () =>
@@ -72,8 +78,6 @@ module.exports = declare((api, options) => {
         require('@babel/plugin-proposal-function-bind')),
       isNotExcluded('partial-application', () =>
         require('@babel/plugin-proposal-partial-application')),
-      isNotExcluded('pipeline-operator', () =>
-        require('@babel/plugin-proposal-pipeline-operator')),
       isNotExcluded('private-methods', () =>
         require('@babel/plugin-proposal-private-methods')),
       isNotExcluded('record-and-tuple', () =>
