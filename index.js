@@ -1,5 +1,6 @@
 const helperUtils = require('@babel/helper-plugin-utils');
 const declare = helperUtils.declare;
+const pkg = require('./package.json');
 
 const defaultTargets = {
   web: 'defaults',
@@ -11,7 +12,7 @@ module.exports = declare((api, options) => {
   let targets = options.targets;
 
   // region Helpers.
-  const isNotExcluded = (str, then) => ((options.exclude || []).indexOf(str) === -1) ? then() : null;
+  const isNotExcluded = (str, then) => ((options.exclude || []).indexOf(str) === -1) ? then(str) : null;
   const setOr = (value, or) => value === undefined ? or : value;
   // endregion
 
@@ -24,9 +25,10 @@ module.exports = declare((api, options) => {
     }
   }
 
-  const defaultPresetEnv = {
+  const presetOptions = {
     useBuiltIns: setOr(options.useBuiltIns, 'entry'),
     targets: targets,
+    spec: setOr(options.spec, false),
     loose: setOr(options.loose, false),
     modules: setOr(options.modules, 'auto'),
     debug: setOr(options.debug, false),
@@ -43,7 +45,7 @@ module.exports = declare((api, options) => {
     presets: [
       (isNotExcluded('preset-env', () => [
         require('@babel/preset-env'),
-        defaultPresetEnv
+        presetOptions
       ]))
     ].filter(p => p !== null),
     plugins: [
@@ -58,25 +60,28 @@ module.exports = declare((api, options) => {
           corejs: {
             version: 3,
             proposals: true
-          }
+          },
+          version: pkg.dependencies['@babel/plugin-transform-runtime']
         }
       ]),
-      isNotExcluded('syntax-top-level-await', () =>
-        require('@babel/plugin-syntax-top-level-await')),
-      isNotExcluded('partial-application', () =>
-        require('@babel/plugin-proposal-partial-application')),
-      isNotExcluded('class-properties', () =>
-        require('@babel/plugin-proposal-class-properties')),
-      isNotExcluded('throw-expressions', () =>
-        require('@babel/plugin-proposal-throw-expressions')),
-      isNotExcluded('private-methods', () =>
-        require('@babel/plugin-proposal-private-methods')),
+      isNotExcluded('async-do-expressions', () =>
+        require('@babel/plugin-proposal-async-do-expressions')),
       isNotExcluded('export-default-from', () =>
         require('@babel/plugin-proposal-export-default-from')),
-      isNotExcluded('object-assign', () =>
-        require('@babel/plugin-transform-object-assign')),
+      isNotExcluded('function-bind', () =>
+        require('@babel/plugin-proposal-function-bind')),
+      isNotExcluded('partial-application', () =>
+        require('@babel/plugin-proposal-partial-application')),
       isNotExcluded('pipeline-operator', () =>
-        require('@babel/plugin-proposal-pipeline-operator'))
+        require('@babel/plugin-proposal-pipeline-operator')),
+      isNotExcluded('private-methods', () =>
+        require('@babel/plugin-proposal-private-methods')),
+      isNotExcluded('record-and-tuple', () =>
+        require('@babel/plugin-proposal-record-and-tuple')),
+      isNotExcluded('throw-expressions', () =>
+        require('@babel/plugin-proposal-throw-expressions')),
+      isNotExcluded('object-assign', () =>
+        require('@babel/plugin-transform-object-assign'))
     ].filter(p => p !== null)
   };
 });
