@@ -13,15 +13,15 @@ Includes the following presets and plugins:
 ```
 @babel/preset-env
 
-@babel/plugin-proposal-export-default-from
-@babel/plugin-proposal-class-properties
+@babel/plugin-proposal-async-do-expressions
 @babel/plugin-proposal-decorators
+@babel/plugin-proposal-export-default-from
+@babel/plugin-proposal-function-bind
 @babel/plugin-proposal-partial-application
-@babel/plugin-proposal-private-methods
+@babel/plugin-proposal-pipeline-operator
+@babel/plugin-proposal-private-method
+@babel/plugin-proposal-record-and-tupl
 @babel/plugin-proposal-throw-expressions
-@babel/plugin-proposal-export-namespace-from
-
-@babel/plugin-transform-for-of
 @babel/plugin-transform-object-assign
 @babel/plugin-transform-runtime
 @babel/runtime-corejs3
@@ -51,11 +51,11 @@ The following values are checked with a `indexOf` check:
 preset-env                   => @babel/preset-env
 decorators                   => @babel/plugin-proposal-decorators
 partial-application          => @babel/plugin-proposal-partial-application
-class-properties             => @babel/plugin-proposal-class-properties
 throw-expressions            => @babel/plugin-proposal-throw-expressions
-private-methods              => @babel/plugin-proposal-private-methods
-export-default-from          => @babel/plugin-proposal-export-default-from
-export-namespace-from        => @babel/plugin-proposal-export-namespace-from
-object-assign                => @babel/plugin-transform-object-assign
-transform-runtime            => @babel/plugin-transform-runtime
+async-do-expressions         => @babel/plugin-proposal-async-do-expressions
+function-bind                => @babel/plugin-proposal-function-bind
+pipeline-operator            => @babel/plugin-proposal-pipeline-operator
+record-and-tuple             => @babel/plugin-proposal-record-and-tuple
 ```
+
+
