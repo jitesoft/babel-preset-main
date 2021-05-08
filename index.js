@@ -70,6 +70,12 @@ module.exports = declare((api, options) => {
           proposal: options.pipeline || 'minimal'
         }
       ]),
+      isNotExcluded('record-and-tuple', () => [
+        require('@babel/plugin-proposal-record-and-tuple'),
+        {
+          syntaxType: 'hash'
+        }
+      ]),
       isNotExcluded('async-do-expressions', () =>
         require('@babel/plugin-proposal-async-do-expressions')),
       isNotExcluded('export-default-from', () =>
@@ -80,8 +86,6 @@ module.exports = declare((api, options) => {
         require('@babel/plugin-proposal-partial-application')),
       isNotExcluded('private-methods', () =>
         require('@babel/plugin-proposal-private-methods')),
-      isNotExcluded('record-and-tuple', () =>
-        require('@babel/plugin-proposal-record-and-tuple')),
       isNotExcluded('throw-expressions', () =>
         require('@babel/plugin-proposal-throw-expressions')),
       isNotExcluded('object-assign', () =>
