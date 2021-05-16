@@ -20,7 +20,7 @@ Includes the following presets and plugins:
 @babel/plugin-proposal-partial-application
 @babel/plugin-proposal-pipeline-operator
 @babel/plugin-proposal-private-method
-@babel/plugin-proposal-record-and-tupl
+@babel/plugin-proposal-record-and-tuple
 @babel/plugin-proposal-throw-expressions
 @babel/plugin-transform-object-assign
 @babel/plugin-transform-runtime
@@ -48,14 +48,12 @@ can use shorter forms in your exclude array.
 The following values are checked with a `indexOf` check:
 
 ```
-preset-env                   => @babel/preset-env
-decorators                   => @babel/plugin-proposal-decorators
-partial-application          => @babel/plugin-proposal-partial-application
-throw-expressions            => @babel/plugin-proposal-throw-expressions
-async-do-expressions         => @babel/plugin-proposal-async-do-expressions
-function-bind                => @babel/plugin-proposal-function-bind
-pipeline-operator            => @babel/plugin-proposal-pipeline-operator
-record-and-tuple             => @babel/plugin-proposal-record-and-tuple
+preset-env            => @babel/preset-env
+decorators            => @babel/plugin-proposal-decorators
+partial-application   => @babel/plugin-proposal-partial-application
+throw-expressions     => @babel/plugin-proposal-throw-expressions
+async-do-expressions  => @babel/plugin-proposal-async-do-expressions
+function-bind         => @babel/plugin-proposal-function-bind
+pipeline-operator     => @babel/plugin-proposal-pipeline-operator
+record-and-tuple      => @babel/plugin-proposal-record-and-tuple
 ```
-
-
