@@ -84,8 +84,6 @@ module.exports = declare((api, options) => {
         require('@babel/plugin-proposal-function-bind')),
       isNotExcluded('partial-application', () =>
         require('@babel/plugin-proposal-partial-application')),
-      isNotExcluded('private-methods', () =>
-        require('@babel/plugin-proposal-private-methods')),
       isNotExcluded('throw-expressions', () =>
         require('@babel/plugin-proposal-throw-expressions')),
       isNotExcluded('object-assign', () =>

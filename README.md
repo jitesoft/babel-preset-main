@@ -19,7 +19,6 @@ Includes the following presets and plugins:
 @babel/plugin-proposal-function-bind
 @babel/plugin-proposal-partial-application
 @babel/plugin-proposal-pipeline-operator
-@babel/plugin-proposal-private-method
 @babel/plugin-proposal-record-and-tuple
 @babel/plugin-proposal-throw-expressions
 @babel/plugin-transform-object-assign
