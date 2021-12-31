@@ -26,23 +26,23 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/helper-plugin-utils": "7.16.5",
-    "@babel/plugin-proposal-async-do-expressions": "7.16.0",
-    "@babel/plugin-proposal-decorators": "7.16.5",
-    "@babel/plugin-proposal-export-default-from": "7.16.5",
-    "@babel/plugin-proposal-function-bind": "7.16.5",
-    "@babel/plugin-proposal-partial-application": "7.16.5",
-    "@babel/plugin-proposal-pipeline-operator": "7.16.5",
-    "@babel/plugin-proposal-record-and-tuple": "7.16.5",
-    "@babel/plugin-proposal-throw-expressions": "7.16.5",
-    "@babel/plugin-transform-object-assign": "7.16.5",
-    "@babel/plugin-transform-runtime": "7.16.5",
-    "@babel/preset-env": "7.16.5"
+    "@babel/helper-plugin-utils": "7.16.7",
+    "@babel/plugin-proposal-async-do-expressions": "7.16.7",
+    "@babel/plugin-proposal-decorators": "7.16.7",
+    "@babel/plugin-proposal-export-default-from": "7.16.7",
+    "@babel/plugin-proposal-function-bind": "7.16.7",
+    "@babel/plugin-proposal-partial-application": "7.16.7",
+    "@babel/plugin-proposal-pipeline-operator": "7.16.7",
+    "@babel/plugin-proposal-record-and-tuple": "7.16.7",
+    "@babel/plugin-proposal-throw-expressions": "7.16.7",
+    "@babel/plugin-transform-object-assign": "7.16.7",
+    "@babel/plugin-transform-runtime": "7.16.7",
+    "@babel/preset-env": "7.16.7"
   },
   "peerDependencies": {
     "@babel/core": ">=7.16",
     "@babel/runtime-corejs3": ">=7.16",
-    "core-js": ">=3.19"
+    "core-js": ">=3.20"
   },
   "peerDependenciesMeta": {
     "@babel/runtime-corejs3": {
