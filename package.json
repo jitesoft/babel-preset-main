@@ -26,7 +26,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/helper-plugin-utils": "7.16.5",
+    "@babel/helper-plugin-utils": "7.16.7",
     "@babel/plugin-proposal-async-do-expressions": "7.16.0",
     "@babel/plugin-proposal-decorators": "7.16.5",
     "@babel/plugin-proposal-export-default-from": "7.16.5",
