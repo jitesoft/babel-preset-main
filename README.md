@@ -39,6 +39,9 @@ Other than those, the following options are possible to use:
     * `node` will set the targets value to `node >= 12`.
     * `web` will set the targets value to `defaults`.
     * `undefined/default` will set the targets value to `defaults, node >= 12`.
+* `recordAndTuple`
+  * `polyfill` (defaults to false)
+  * `polyfillModuleName` (defaults to peerDependency `@bloomberg/record-tuple-polyfill`)
 
 ### Excluding
 

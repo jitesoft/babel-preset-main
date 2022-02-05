@@ -37,6 +37,10 @@ module.exports = declare((api, options) => {
       version: 3,
       proposals: true
     }),
+    recordAndTuple: setOr(options.recordAndTuple, {
+      polyfill: setOr( false),
+      polyfillModuleName: '@bloomberg/record-tuple-polyfill',
+    }),
     forceAllTransforms: setOr(options.forceAllTransforms, false),
     shippedProposals: setOr(options.shippedProposals, false)
   };
@@ -73,7 +77,8 @@ module.exports = declare((api, options) => {
       isNotExcluded('record-and-tuple', () => [
         require('@babel/plugin-proposal-record-and-tuple'),
         {
-          syntaxType: 'hash'
+          importPolyfill: options.recordAndTuple.polyfill,
+          polyfillModuleName: options.recordAndTuple.polyfillModuleName,
         }
       ]),
       isNotExcluded('async-do-expressions', () =>
