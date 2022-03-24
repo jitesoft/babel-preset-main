@@ -40,8 +40,15 @@ Other than those, the following options are possible to use:
     * `web` will set the targets value to `defaults`.
     * `undefined/default` will set the targets value to `defaults, node >= 12`.
 * `recordAndTuple`
+  * `syntaxType` (defaults to 'hash) 
   * `polyfill` (defaults to false)
   * `polyfillModuleName` (defaults to peerDependency `@bloomberg/record-tuple-polyfill`)
+* `decorators`
+  * `version` (defaults to `2018-09`)
+  * `beforeExport` (defaults to `true`)
+* `pipeline`
+  * `poposal` (defaults to `hack`) 
+  * `topicToken` (defaults to `^^`)
 
 ### Excluding
 

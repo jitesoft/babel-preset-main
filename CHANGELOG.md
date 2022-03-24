@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.0.0
+
+Updated plugins to latest versions.
+Breaking change (making it major version change) due to configuration changes to the following plugins:
+
+* @babel/plugin-proposal-pipeline-operator
+* @babel/plugin-proposal-record-and-tuple
+* @babel/plugin-proposal-decorators
+
 ## 2.9.0
 
 Removal of ESlint packages.

@@ -25,20 +25,27 @@ module.exports = declare((api, options) => {
     }
   }
 
+  const opts = {
+    decorators: {},
+    pipeline: {},
+    recordAndTuple: {},
+    ...options,
+  }
+
   const presetOptions = {
-    useBuiltIns: setOr(options.useBuiltIns, 'entry'),
+    useBuiltIns: setOr(opts.useBuiltIns, 'entry'),
     targets: targets,
-    spec: setOr(options.spec, false),
-    loose: setOr(options.loose, false),
-    modules: setOr(options.modules, 'auto'),
-    debug: setOr(options.debug, false),
-    include: setOr(options.include, []),
-    corejs: setOr(options.corejs, {
+    spec: setOr(opts.spec, false),
+    loose: setOr(opts.loose, false),
+    modules: setOr(opts.modules, 'auto'),
+    debug: setOr(opts.debug, false),
+    include: setOr(opts.include, []),
+    corejs: setOr(opts.corejs, {
       version: 3,
       proposals: true
     }),
-    forceAllTransforms: setOr(options.forceAllTransforms, false),
-    shippedProposals: setOr(options.shippedProposals, false)
+    forceAllTransforms: setOr(opts.forceAllTransforms, false),
+    shippedProposals: setOr(opts.shippedProposals, false)
   };
 
   return {
@@ -51,8 +58,8 @@ module.exports = declare((api, options) => {
     plugins: [
       isNotExcluded('decorators', () => [
         require('@babel/plugin-proposal-decorators'), {
-          decoratorsBeforeExport: setOr(options.decoratorsBeforeExport, true),
-          legacy: setOr(options.legacy, false)
+          decoratorsBeforeExport: setOr(opts.decorators.beforeExport, true),
+          version: setOr(opts.decorators.version, '2018-09'),
         }
       ]),
       isNotExcluded('transform-runtime', () => [
@@ -67,16 +74,20 @@ module.exports = declare((api, options) => {
       isNotExcluded('pipeline-operator', () => [
         require('@babel/plugin-proposal-pipeline-operator'),
         {
-          proposal: options.pipeline || 'minimal'
+          proposal: setOr(opts.pipeline.proposal, 'hack'),
+          topicToken: setOr(opts.pipeline.topicToken, '^^')
         }
       ]),
       isNotExcluded('record-and-tuple', () => [
         require('@babel/plugin-proposal-record-and-tuple'),
-        setOr(options.recordAndTuple, {
-          syntaxType: 'hash',
-          polyfill: false,
-          polyfillModuleName: '@bloomberg/record-tuple-polyfill',
-        }),
+        {
+          syntaxType: setOr(opts.recordAndTuple.syntaxType, 'hash'),
+          importPolyfill: setOr(opts.recordAndTuple.polyfill, false),
+          polyfillModuleName: setOr(
+            opts.recordAndTuple.polyfillModuleName,
+            '@bloomberg/record-tuple-polyfill'
+          ),
+        },
       ]),
       isNotExcluded('async-do-expressions', () =>
         require('@babel/plugin-proposal-async-do-expressions')),
