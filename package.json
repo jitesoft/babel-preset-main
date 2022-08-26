@@ -40,14 +40,14 @@
     "@babel/preset-env": "7.18.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.10",
+    "@babel/core": "^7.18.13",
     "@babel/runtime-corejs3": "^7.18.9",
-    "core-js": "^3.24"
+    "core-js": "^3.25"
   },
   "peerDependencies": {
     "@babel/core": ">=7.18",
     "@babel/runtime-corejs3": ">=7.18",
-    "core-js": ">=3.24",
+    "core-js": ">=3.25",
     "@bloomberg/record-tuple-polyfill": "^0.0.5"
   },
   "peerDependenciesMeta": {
