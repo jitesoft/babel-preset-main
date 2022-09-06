@@ -21,6 +21,7 @@ Includes the following presets and plugins:
 @babel/plugin-proposal-pipeline-operator
 @babel/plugin-proposal-record-and-tuple
 @babel/plugin-proposal-throw-expressions
+@babel/plugin-proposal-duplicate-named-capturing-groups-regex
 @babel/plugin-transform-object-assign
 @babel/plugin-transform-runtime
 @babel/runtime-corejs3
@@ -36,7 +37,7 @@ Other than those, the following options are possible to use:
 
 * `exclude` - Takes an array of plugins that should NOT be used (full plugin name including `@babel`) (defaults to `[]`).
 * `mode` - Flags build mode (`web`, `node` or undefined for default).
-    * `node` will set the targets value to `node >= 12`.
+    * `node` will set the targets value to `node >= 14`.
     * `web` will set the targets value to `defaults`.
     * `undefined/default` will set the targets value to `defaults, node >= 12`.
 * `recordAndTuple`
@@ -44,8 +45,7 @@ Other than those, the following options are possible to use:
   * `polyfill` (defaults to false)
   * `polyfillModuleName` (defaults to peerDependency `@bloomberg/record-tuple-polyfill`)
 * `decorators`
-  * `version` (defaults to `2018-09`)
-  * `beforeExport` (defaults to `true`)
+  * `version` (defaults to `2022-03`)
 * `pipeline`
   * `poposal` (defaults to `hack`) 
   * `topicToken` (defaults to `^^`)
@@ -57,12 +57,13 @@ can use shorter forms in your exclude array.
 The following values are checked with a `indexOf` check:
 
 ```
-preset-env            => @babel/preset-env
-decorators            => @babel/plugin-proposal-decorators
-partial-application   => @babel/plugin-proposal-partial-application
-throw-expressions     => @babel/plugin-proposal-throw-expressions
-async-do-expressions  => @babel/plugin-proposal-async-do-expressions
-function-bind         => @babel/plugin-proposal-function-bind
-pipeline-operator     => @babel/plugin-proposal-pipeline-operator
-record-and-tuple      => @babel/plugin-proposal-record-and-tuple
+preset-env                             => @babel/preset-env
+decorators                             => @babel/plugin-proposal-decorators
+partial-application                    => @babel/plugin-proposal-partial-application
+throw-expressions                      => @babel/plugin-proposal-throw-expressions
+async-do-expressions                   => @babel/plugin-proposal-async-do-expressions
+function-bind                          => @babel/plugin-proposal-function-bind
+pipeline-operator                      => @babel/plugin-proposal-pipeline-operator
+record-and-tuple                       => @babel/plugin-proposal-record-and-tuple
+duplicate-named-capturing-groups-regex => @babel/plugin-proposal-duplicate-named-capturing-groups-regex
 ```

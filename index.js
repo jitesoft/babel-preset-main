@@ -4,7 +4,7 @@ const pkg = require('./package.json');
 
 const defaultTargets = {
   web: 'defaults',
-  node: 'node >= 12'
+  node: 'node >= 14'
 };
 
 module.exports = declare((api, options) => {
@@ -58,7 +58,6 @@ module.exports = declare((api, options) => {
     plugins: [
       isNotExcluded('decorators', () => [
         require('@babel/plugin-proposal-decorators'), {
-          decoratorsBeforeExport: setOr(opts.decorators.beforeExport, true),
           version: setOr(opts.decorators.version, '2022-03'),
         }
       ]),
