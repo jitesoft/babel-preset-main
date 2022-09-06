@@ -59,7 +59,7 @@ module.exports = declare((api, options) => {
       isNotExcluded('decorators', () => [
         require('@babel/plugin-proposal-decorators'), {
           decoratorsBeforeExport: setOr(opts.decorators.beforeExport, true),
-          version: setOr(opts.decorators.version, '2018-09'),
+          version: setOr(opts.decorators.version, '2022-03'),
         }
       ]),
       isNotExcluded('transform-runtime', () => [
@@ -100,7 +100,9 @@ module.exports = declare((api, options) => {
       isNotExcluded('throw-expressions', () =>
         require('@babel/plugin-proposal-throw-expressions')),
       isNotExcluded('object-assign', () =>
-        require('@babel/plugin-transform-object-assign'))
+        require('@babel/plugin-transform-object-assign')),
+      isNotExcluded('duplicate-named-capturing-groups-regex', () =>
+        require('@babel/plugin-proposal-duplicate-named-capturing-groups-regex'))
     ].filter(p => p !== null)
   };
 });
