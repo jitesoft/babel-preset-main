@@ -25,6 +25,7 @@ Includes the following presets and plugins:
 @babel/plugin-transform-object-assign
 @babel/plugin-transform-runtime
 @babel/runtime-corejs3
+@babel/plugin-proposal-regexp-modifiers
 ```
 
 Requires `corejs (v 3+)` and `@babel/core`.
@@ -45,7 +46,7 @@ Other than those, the following options are possible to use:
   * `polyfill` (defaults to false)
   * `polyfillModuleName` (defaults to peerDependency `@bloomberg/record-tuple-polyfill`)
 * `decorators`
-  * `version` (defaults to `2022-03`)
+  * `version` (defaults to `2023-01`)
 * `pipeline`
   * `poposal` (defaults to `hack`) 
   * `topicToken` (defaults to `^^`)
@@ -59,6 +60,7 @@ The following values are checked with a `indexOf` check:
 ```
 preset-env                             => @babel/preset-env
 decorators                             => @babel/plugin-proposal-decorators
+transform-runtime                      => @babel/plugin-transform-runtime
 partial-application                    => @babel/plugin-proposal-partial-application
 throw-expressions                      => @babel/plugin-proposal-throw-expressions
 async-do-expressions                   => @babel/plugin-proposal-async-do-expressions
@@ -66,4 +68,7 @@ function-bind                          => @babel/plugin-proposal-function-bind
 pipeline-operator                      => @babel/plugin-proposal-pipeline-operator
 record-and-tuple                       => @babel/plugin-proposal-record-and-tuple
 duplicate-named-capturing-groups-regex => @babel/plugin-proposal-duplicate-named-capturing-groups-regex
+export-default-from                    => @babel/plugin-proposal-export-default-from
+object-assign                          => @babel/plugin-transform-object-assign
+regexp-modifiers                       => @babel/plugin-proposal-regexp-modifiers
 ```

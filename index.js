@@ -30,7 +30,7 @@ module.exports = declare((api, options) => {
     pipeline: {},
     recordAndTuple: {},
     ...options,
-  }
+  };
 
   const presetOptions = {
     useBuiltIns: setOr(opts.useBuiltIns, 'entry'),
@@ -58,7 +58,7 @@ module.exports = declare((api, options) => {
     plugins: [
       isNotExcluded('decorators', () => [
         require('@babel/plugin-proposal-decorators'), {
-          version: setOr(opts.decorators.version, '2022-03'),
+          version: setOr(opts.decorators.version, '2023-01'),
         }
       ]),
       isNotExcluded('transform-runtime', () => [
@@ -101,7 +101,9 @@ module.exports = declare((api, options) => {
       isNotExcluded('object-assign', () =>
         require('@babel/plugin-transform-object-assign')),
       isNotExcluded('duplicate-named-capturing-groups-regex', () =>
-        require('@babel/plugin-proposal-duplicate-named-capturing-groups-regex'))
+        require('@babel/plugin-proposal-duplicate-named-capturing-groups-regex')),
+      isNotExcluded('regexp-modifiers', () =>
+        require('@babel/plugin-proposal-regexp-modifiers'))
     ].filter(p => p !== null)
   };
 });
