@@ -1,6 +1,7 @@
 {
   "name": "@jitesoft/babel-preset-main",
   "private": false,
+  "version": "0.0.0",
   "description": "Babel preset with configurations for Jitesoft projects.",
   "main": "index.js",
   "publishConfig": {
@@ -26,30 +27,30 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/helper-plugin-utils": "7.22.5",
-    "@babel/plugin-proposal-async-do-expressions": "7.23.3",
-    "@babel/plugin-proposal-decorators": "7.23.7",
-    "@babel/plugin-proposal-export-default-from": "7.23.3",
-    "@babel/plugin-proposal-function-bind": "7.23.3",
-    "@babel/plugin-proposal-partial-application": "7.23.3",
-    "@babel/plugin-proposal-pipeline-operator": "7.23.3",
-    "@babel/plugin-proposal-record-and-tuple": "7.23.3",
-    "@babel/plugin-proposal-throw-expressions": "7.23.3",
-    "@babel/plugin-transform-object-assign": "7.23.3",
-    "@babel/plugin-transform-runtime": "7.23.7",
-    "@babel/plugin-proposal-duplicate-named-capturing-groups-regex": "7.23.3",
-    "@babel/preset-env": "7.23.8",
-    "@babel/plugin-proposal-regexp-modifiers": "7.23.3"
+    "@babel/helper-plugin-utils": "7.24.0",
+    "@babel/plugin-proposal-async-do-expressions": "7.24.1",
+    "@babel/plugin-proposal-decorators": "7.24.1",
+    "@babel/plugin-proposal-export-default-from": "7.24.1",
+    "@babel/plugin-proposal-function-bind": "7.24.1",
+    "@babel/plugin-proposal-partial-application": "7.24.1",
+    "@babel/plugin-proposal-pipeline-operator": "7.24.1",
+    "@babel/plugin-proposal-record-and-tuple": "7.24.1",
+    "@babel/plugin-proposal-throw-expressions": "7.24.1",
+    "@babel/plugin-transform-object-assign": "7.24.1",
+    "@babel/plugin-transform-runtime": "7.24.3",
+    "@babel/plugin-proposal-duplicate-named-capturing-groups-regex": "7.24.1",
+    "@babel/preset-env": "7.24.3",
+    "@babel/plugin-proposal-regexp-modifiers": "7.24.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.23",
-    "@babel/runtime-corejs3": "^7.23",
-    "core-js": "^3.35"
+    "@babel/core": "^7.24",
+    "@babel/runtime-corejs3": "^7.24",
+    "core-js": "^3.36"
   },
   "peerDependencies": {
-    "@babel/core": ">=7.23",
-    "@babel/runtime-corejs3": ">=7.23",
-    "core-js": ">=3.35",
+    "@babel/core": ">=7.24",
+    "@babel/runtime-corejs3": ">=7.24",
+    "core-js": ">=3.36",
     "@bloomberg/record-tuple-polyfill": "^0.0.5"
   },
   "peerDependenciesMeta": {
