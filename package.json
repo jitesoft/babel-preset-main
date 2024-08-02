@@ -27,30 +27,29 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/helper-plugin-utils": "7.24.0",
-    "@babel/plugin-proposal-async-do-expressions": "7.24.1",
-    "@babel/plugin-proposal-decorators": "7.24.1",
-    "@babel/plugin-proposal-export-default-from": "7.24.1",
-    "@babel/plugin-proposal-function-bind": "7.24.1",
-    "@babel/plugin-proposal-partial-application": "7.24.1",
-    "@babel/plugin-proposal-pipeline-operator": "7.24.1",
-    "@babel/plugin-proposal-record-and-tuple": "7.24.1",
-    "@babel/plugin-proposal-throw-expressions": "7.24.1",
-    "@babel/plugin-transform-object-assign": "7.24.1",
-    "@babel/plugin-transform-runtime": "7.24.3",
-    "@babel/plugin-proposal-duplicate-named-capturing-groups-regex": "7.24.1",
-    "@babel/preset-env": "7.24.3",
-    "@babel/plugin-proposal-regexp-modifiers": "7.24.1"
+    "@babel/helper-plugin-utils": "7.24.8",
+    "@babel/plugin-proposal-async-do-expressions": "7.25.0",
+    "@babel/plugin-proposal-decorators": "7.24.7",
+    "@babel/plugin-proposal-export-default-from": "7.24.7",
+    "@babel/plugin-proposal-function-bind": "7.24.7",
+    "@babel/plugin-proposal-partial-application": "7.24.7",
+    "@babel/plugin-proposal-pipeline-operator": "7.24.7",
+    "@babel/plugin-proposal-record-and-tuple": "7.24.7",
+    "@babel/plugin-proposal-throw-expressions": "7.24.7",
+    "@babel/plugin-transform-object-assign": "7.24.7",
+    "@babel/plugin-transform-runtime": "7.24.7",
+    "@babel/preset-env": "7.25.3",
+    "@babel/plugin-proposal-regexp-modifiers": "7.24.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.24",
-    "@babel/runtime-corejs3": "^7.24",
-    "core-js": "^3.36"
+    "@babel/core": "^7.25",
+    "@babel/runtime-corejs3": "^7.25",
+    "core-js": "^3.37"
   },
   "peerDependencies": {
-    "@babel/core": ">=7.24",
-    "@babel/runtime-corejs3": ">=7.24",
-    "core-js": ">=3.36",
+    "@babel/core": ">=7.25",
+    "@babel/runtime-corejs3": ">=7.25",
+    "core-js": ">=3.37",
     "@bloomberg/record-tuple-polyfill": "^0.0.5"
   },
   "peerDependenciesMeta": {

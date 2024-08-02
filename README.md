@@ -21,7 +21,6 @@ Includes the following presets and plugins:
 @babel/plugin-proposal-pipeline-operator
 @babel/plugin-proposal-record-and-tuple
 @babel/plugin-proposal-throw-expressions
-@babel/plugin-proposal-duplicate-named-capturing-groups-regex
 @babel/plugin-transform-object-assign
 @babel/plugin-transform-runtime
 @babel/runtime-corejs3
@@ -67,7 +66,6 @@ async-do-expressions                   => @babel/plugin-proposal-async-do-expres
 function-bind                          => @babel/plugin-proposal-function-bind
 pipeline-operator                      => @babel/plugin-proposal-pipeline-operator
 record-and-tuple                       => @babel/plugin-proposal-record-and-tuple
-duplicate-named-capturing-groups-regex => @babel/plugin-proposal-duplicate-named-capturing-groups-regex
 export-default-from                    => @babel/plugin-proposal-export-default-from
 object-assign                          => @babel/plugin-transform-object-assign
 regexp-modifiers                       => @babel/plugin-proposal-regexp-modifiers

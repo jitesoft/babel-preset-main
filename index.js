@@ -100,8 +100,6 @@ module.exports = declare((api, options) => {
         require('@babel/plugin-proposal-throw-expressions')),
       isNotExcluded('object-assign', () =>
         require('@babel/plugin-transform-object-assign')),
-      isNotExcluded('duplicate-named-capturing-groups-regex', () =>
-        require('@babel/plugin-proposal-duplicate-named-capturing-groups-regex')),
       isNotExcluded('regexp-modifiers', () =>
         require('@babel/plugin-proposal-regexp-modifiers'))
     ].filter(p => p !== null)
